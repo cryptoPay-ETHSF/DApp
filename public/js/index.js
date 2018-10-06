@@ -14,7 +14,6 @@ if (typeof web3 !== "undefined") {
         checklist.isMetaMaskInstalled = true;
         web3 = new Web3(web3.currentProvider);
         account = web3.eth.accounts[0];
-        console.log(account);
 
         if (account.length != 0) {
           checklist.isLoggedIn = true; 

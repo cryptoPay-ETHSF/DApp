@@ -13,7 +13,7 @@ db.ref('links').on('value', function(snapshot) {
         Object.keys(data[key])
         .forEach(function (links, i) {
             count.links++;
-            if (links == account) {
+            if (key == account) {
                 count.total_transaction = count.total_transaction + data[key][links].total_transaction;
                 count.dai_collected = count.dai_collected + data[key][links].DAI_collected;
             }

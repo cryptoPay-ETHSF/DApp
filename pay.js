@@ -1,5 +1,4 @@
 const express = require('express');
-// const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
 const app = express();
@@ -16,9 +15,6 @@ app.get('/', function (req, res) {
 })
 app.get('/dashboard', function (req, res) {
     res.render('dashboard.html');
-})
-app.get('/payment_links', function (req, res) {
-    res.render('payment_links.html');
 })
 app.get('/manage_cdp', function (req, res) {
     res.render('manage_cdp.html');

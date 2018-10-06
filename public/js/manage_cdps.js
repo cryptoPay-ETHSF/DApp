@@ -1,3 +1,6 @@
+var contractAddress = '0xfDa504E1CC6fbA897A109cE5122200DB0A8AD392';
+
+
 $(document).ready(function() {
     // show loading
     showloading();

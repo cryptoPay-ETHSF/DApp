@@ -1,4 +1,4 @@
-[
+var cryptoPayABI = [
     {
       "constant": true,
       "inputs": [

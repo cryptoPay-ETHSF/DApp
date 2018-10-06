@@ -46,7 +46,7 @@
                             <td>
                                 <span onclick="changeStatus(this, '${key}')" class="change_payment_link_status text-capitalize ${main_status}">${main_status}</span>
                             </td>
-                        </tr>'`;
+                        </tr>'`; 
         });
         $('#payment_links tbody').append(temp);
         $('#payment_links').DataTable();

@@ -1,3 +1,5 @@
+$('.coinsBox').hide();
+
 var link_id;
 var dataObj = {};
 
@@ -185,7 +187,7 @@ Object.keys(coinsData)
     // if (coinsData[key].rop) {
         var forClass = `${coinsData[key].id + 'ForColor'}`;
         var color = coinsData[key].color;
-        var html = `<div class="selectCoinsClick ${forClass}" onclick="funcToSelect('${coinsData[key].id}')">
+        var html = `<div class="selectCoinsClick ${forClass}" onclick="funcToSelect('${coinsData[key].name}')">
                         <div class="logoNameBox">
                             <div class="logoBox">
                                 <img src="https://easwap.com/logos/${coinsData[key].id}.svg" style="width:54px; height:54px">
@@ -208,6 +210,14 @@ Object.keys(coinsData)
 });
 
 $('.changeTokenBut').click(function() {
-    console.log('adhuj');
-    $('.coinsBox').show();
+    $('.coinsBox').fadeIn();
 });
+
+$('.selectCoinsClick').click(function() {
+    $('.coinsBox').fadeOut();
+});
+
+var getExpectedPrice;
+function funcToSelect(coinId) {
+    var coinKyberId = coinsData[coinId].kyber;
+}

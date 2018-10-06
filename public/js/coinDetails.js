@@ -4,6 +4,7 @@ var coinsData = {
         fullname : 'Ethereum',
         color : '#627EEA',
         id : 'eth',
+        kyber : 'ETH',
         rop : true
     },
     zil: {
@@ -11,7 +12,7 @@ var coinsData = {
         fullname: 'Zilliqa',
         color: '#49c1bf',
         id: 'zil',
-        kyber : 'ETH_ZIL',
+        kyber : 'ZIL',
         rop: true
     },
     knc: {
@@ -19,7 +20,7 @@ var coinsData = {
         fullname: 'Kybernetwork',
         color: '#188C92',
         id: 'knc',
-        kyber: 'ETH_KNC',
+        kyber: 'KNC',
         rop: true
     },
     omg: {
@@ -27,7 +28,7 @@ var coinsData = {
         fullname: 'OmiseGo',
         color: '#1A53F0',
         id: 'omg',
-        kyber: 'ETH_OMG',
+        kyber: 'OMG',
         rop: true
     },
     snt: {
@@ -35,7 +36,7 @@ var coinsData = {
         fullname: 'Status',
         color: '#5B6DEE',
         id: 'snt',
-        kyber: 'ETH_SNT',
+        kyber: 'SNT',
         rop: true
     },
     elf: {
@@ -43,7 +44,7 @@ var coinsData = {
         fullname: 'Aelf',
         color: '#2b5ebb',
         id: 'elf',
-        kyber: 'ETH_ELF',
+        kyber: 'ELF',
         rop: true
     },
     powr: {
@@ -51,7 +52,7 @@ var coinsData = {
         fullname: 'Power Ledger',
         color: '#05BCA9',
         id: 'powr',
-        kyber: 'ETH_POWR',
+        kyber: 'POWR',
         rop: true
     },
     mana: {
@@ -59,7 +60,7 @@ var coinsData = {
         fullname: 'Decentraland',
         color: '#BFB5AF',
         id: 'mana',
-        kyber: 'ETH_MANA',
+        kyber: 'MANA',
         rop: true
     },
     bat: {
@@ -67,7 +68,7 @@ var coinsData = {
         fullname: 'Basic Attention Token',
         color: '#FF5000',
         id: 'bat',
-        kyber: 'ETH_BAT',
+        kyber: 'BAT',
         rop: true
     },
     req: {
@@ -75,7 +76,7 @@ var coinsData = {
         fullname: 'Request',
         color: '#6CFCCD',
         id: 'req',
-        kyber: 'ETH_REQ',
+        kyber: 'REQ',
         rop: true
     },
     gto: {
@@ -83,7 +84,7 @@ var coinsData = {
         fullname: 'Gifto',
         color: '#7f27ff',
         id: 'gto',
-        kyber: 'ETH_GTO',
+        kyber: 'GTO',
         rop: true
     },
     rdn: {
@@ -91,7 +92,7 @@ var coinsData = {
         fullname: 'Raiden',
         color: '#2A2A2A',
         id: 'rdn',
-        kyber: 'ETH_RDN',
+        kyber: 'RDN',
         rop: true
     },
     appc: {
@@ -99,7 +100,7 @@ var coinsData = {
         fullname: 'AppCoins',
         color: '#fd875e',
         id: 'appc',
-        kyber: 'ETH_APPC',
+        kyber: 'APPC',
         rop: true
     },
     eng: {
@@ -107,7 +108,7 @@ var coinsData = {
         fullname: 'Enigma',
         color: '#2f2f2f',
         id: 'eng',
-        kyber: 'ETH_ENG',
+        kyber: 'ENG',
         rop: true
     },
     salt: {
@@ -115,7 +116,7 @@ var coinsData = {
         fullname: 'Salt',
         color: '#1BEEF4',
         id: 'salt',
-        kyber: 'ETH_SALT',
+        kyber: 'SALT',
         rop: true
     },
     adx: {
@@ -123,7 +124,7 @@ var coinsData = {
         fullname: 'AdEx',
         color: '#1B75BC',
         id: 'adx',
-        kyber: 'ETH_ADX',
+        kyber: 'ADX',
         rop: true
     },
     ast: {
@@ -131,7 +132,7 @@ var coinsData = {
         fullname: 'AirSwap',
         color: '#0061ff',
         id: 'ast',
-        kyber: 'ETH_AST',
+        kyber: 'AST',
         rop: true
     },
     rcn: {
@@ -139,7 +140,7 @@ var coinsData = {
         fullname: 'Ripio Credit Network',
         color: '#3555f9',
         id: 'rcn',
-        kyber: 'ETH_RCN',
+        kyber: 'RCN',
         rop: true
     },
     link: {
@@ -147,7 +148,7 @@ var coinsData = {
         fullname: 'Chain Link',
         color: '#01a6fb',
         id: 'link',
-        kyber: 'ETH_LINK',
+        kyber: 'LINK',
         rop: true
     },
     storm: {
@@ -155,7 +156,7 @@ var coinsData = {
         fullname: 'Storm',
         color: '#080d98',
         id: 'storm',
-        kyber: 'ETH_STORM',
+        kyber: 'STORM',
         rop: true
     },
     iost: {
@@ -163,7 +164,7 @@ var coinsData = {
         fullname: 'IOStoken',
         color: '#1c1c1c',
         id: 'iost',
-        kyber: 'ETH_IOST',
+        kyber: 'IOST',
         rop: true
     },
     abt: {
@@ -171,7 +172,7 @@ var coinsData = {
         fullname: 'ArcBlock',
         color: '#33d1d1',
         id: 'abt',
-        kyber: 'ETH_ABT',
+        kyber: 'ABT',
         rop: false
     },
     enj: {
@@ -179,7 +180,7 @@ var coinsData = {
         fullname: 'Enjin Coin',
         color: '#624dbf',
         id: 'enj',
-        kyber: 'ETH_ENJ',
+        kyber: 'ENJ',
         rop: false
     },
     aion: {
@@ -187,7 +188,7 @@ var coinsData = {
         fullname: 'Aion',
         color: '#00BFEC',
         id: 'aion',
-        kyber: 'ETH_AION',
+        kyber: 'AION',
         rop: false
     },
     ae: {
@@ -195,7 +196,7 @@ var coinsData = {
         fullname: 'Aeternity',
         color: '#DE3F6B',
         id: 'ae',
-        kyber: 'ETH_AE',
+        kyber: 'AE',
         rop: false
     },
     blz: {
@@ -203,7 +204,7 @@ var coinsData = {
         fullname: 'Bluezelle',
         color: '#18578c',
         id: 'blz',
-        kyber: 'ETH_BLZ',
+        kyber: 'BLZ',
         rop: false
     },
     poly: {
@@ -211,7 +212,7 @@ var coinsData = {
         fullname: 'Polymath',
         color: '#4c5a95',
         id: 'poly',
-        kyber: 'ETH_POLY',
+        kyber: 'POLY',
         rop: false
     },
     cvc: {
@@ -219,7 +220,7 @@ var coinsData = {
         fullname: 'Civic',
         color: '#3AB03E',
         id: 'cvc',
-        kyber: 'ETH_CVC',
+        kyber: 'CVC',
         rop: false
     },
     ethos: {
@@ -227,7 +228,7 @@ var coinsData = {
         fullname: 'Ethos',
         color: '#00F0B2',
         id: 'ethos',
-        kyber: 'ETH_ETHOS',
+        kyber: 'ETHOS',
         rop: true
     },
     dai: {
@@ -235,7 +236,7 @@ var coinsData = {
         fullname: 'Dai',
         color: '#F7B24B',
         id: 'dai',
-        kyber: 'ETH_DAI',
+        kyber: 'DAI',
         rop: true
     },
     mot: {
@@ -243,7 +244,7 @@ var coinsData = {
         fullname: 'Olympus Labs',
         color: '#364368',
         id: 'mot',
-        kyber: 'ETH_MOT',
+        kyber: 'MOT',
         rop: false
     },
     dgx: {
@@ -251,7 +252,7 @@ var coinsData = {
         fullname: 'Digix',
         color: '#C09F57',
         id: 'dgx',
-        kyber: 'ETH_DGX',
+        kyber: 'DGX',
         rop: false
     },
     pal: {
@@ -259,7 +260,7 @@ var coinsData = {
         fullname: 'PolicyPal Network',
         color: '#16B99F',
         id: 'pal',
-        kyber: 'ETH_PAL',
+        kyber: 'PAL',
         rop: false
     },
     elec: {
@@ -267,7 +268,7 @@ var coinsData = {
         fullname: 'Electrify Asia',
         color: '#F2EC22',
         id: 'elec',
-        kyber: 'ETH_ELEC',
+        kyber: 'ELEC',
         rop: false
     },
     bbo: {
@@ -275,7 +276,7 @@ var coinsData = {
         fullname: 'Bigbom',
         color: '#42A442',
         id: 'bbo',
-        kyber: 'ETH_BBO',
+        kyber: 'BBO',
         rop: true
     },
     lba: {
@@ -283,7 +284,7 @@ var coinsData = {
         fullname: 'Libra Credit',
         color: '#0D7296',
         id: 'lba',
-        kyber: 'ETH_LBA',
+        kyber: 'LBA',
         rop: false
     },
     edu: {
@@ -291,7 +292,7 @@ var coinsData = {
         fullname: 'EduCoin',
         color: '#376EFE',
         id: 'edu',
-        kyber: 'ETH_EDU',
+        kyber: 'EDU',
         rop: false
     },
     tusd: {
@@ -299,7 +300,7 @@ var coinsData = {
         fullname: 'TrueUSD',
         color: '#1D5695',
         id: 'tusd',
-        kyber: 'ETH_TUSD',
+        kyber: 'TUSD',
         rop: false
     },
     chat: {
@@ -307,7 +308,7 @@ var coinsData = {
         fullname: 'ChatCoin',
         color: '#3EC7C2',
         id: 'chat',
-        kyber: 'ETH_CHAT',
+        kyber: 'CHAT',
         rop: false
     },
     dta: {
@@ -315,7 +316,7 @@ var coinsData = {
         fullname: 'DATA',
         color: '#040612',
         id: 'dta',
-        kyber: 'ETH_DTA',
+        kyber: 'DTA',
         rop: false
     },
     pay: {
@@ -323,7 +324,7 @@ var coinsData = {
         fullname: 'TenX',
         color: '#2F2E33',
         id: 'pay',
-        kyber: 'ETH_PAY',
+        kyber: 'PAY',
         rop: false
     },
     poe: {
@@ -331,7 +332,7 @@ var coinsData = {
         fullname: 'Poet',
         color: '#000000',
         id: 'poe',
-        kyber: 'ETH_POE',
+        kyber: 'POE',
         rop: false
     },
     sub: {
@@ -339,7 +340,7 @@ var coinsData = {
         fullname: 'Substratum',
         color: '#E83833',
         id: 'sub',
-        kyber: 'ETH_SUB',
+        kyber: 'SUB',
         rop: false
     },
     bnt: {
@@ -347,7 +348,7 @@ var coinsData = {
         fullname: 'Bancor',
         color: '#1b3f72',
         id: 'bnt',
-        kyber: 'ETH_BNT',
+        kyber: 'BNT',
         rop: false
     },
     wax: {
@@ -355,7 +356,7 @@ var coinsData = {
         fullname: 'Worldwide Asset eXchange',
         color: '#1F8C8D',
         id: 'wax',
-        kyber: 'ETH_WAX',
+        kyber: 'WAX',
         rop: false
     },
     tomo: {
@@ -363,7 +364,7 @@ var coinsData = {
         fullname: 'TomoChain',
         color: '#5E448B',
         id: 'tomo',
-        kyber: 'ETH_TOMO',
+        kyber: 'TOMO',
         rop: false
     },
     wings: {
@@ -371,7 +372,7 @@ var coinsData = {
         fullname: 'Wings',
         color: '#5E448B',
         id: 'wings',
-        kyber: 'ETH_WINGS',
+        kyber: 'WINGS',
         rop: false
     },
     mtl: {
@@ -379,7 +380,7 @@ var coinsData = {
         fullname: 'Metal',
         color: '#5E448B',
         id: 'mtl',
-        kyber: 'ETH_MTL',
+        kyber: 'MTL',
         rop: false
     },
     wabi: {
@@ -387,7 +388,7 @@ var coinsData = {
         fullname: 'WaBi',
         color: '#5E448B',
         id: 'wabi',
-        kyber: 'ETH_WABI',
+        kyber: 'WABI',
         rop: false
     },
     mds: {
@@ -395,7 +396,7 @@ var coinsData = {
         fullname: 'MediShares',
         color: '#5E448B',
         id: 'mds',
-        kyber: 'ETH_MDS',
+        kyber: 'MDS',
         rop: false
     },
     lend: {
@@ -403,7 +404,7 @@ var coinsData = {
         fullname: 'EthLend',
         color: '#5E448B',
         id: 'lend',
-        kyber: 'ETH_LEND',
+        kyber: 'LEND',
         rop: false
     },
     cofi: {
@@ -411,7 +412,7 @@ var coinsData = {
         fullname: 'CoinFi',
         color: '#5E448B',
         id: 'cofi',
-        kyber: 'ETH_COFI',
+        kyber: 'COFI',
         rop: false
     },
     moc: {
@@ -419,7 +420,7 @@ var coinsData = {
         fullname: 'Mossland',
         color: '#5E448B',
         id: 'moc',
-        kyber: 'ETH_MOC',
+        kyber: 'MOC',
         rop: false
     },
     weth: {
@@ -427,7 +428,7 @@ var coinsData = {
         fullname: 'Wrapped Ether',
         color: '#5E448B',
         id: 'weth',
-        kyber: 'ETH_WETH',
+        kyber: 'WETH',
         rop: false
     },
     zrx: {
@@ -435,7 +436,7 @@ var coinsData = {
         fullname: '0x Protocol',
         color: '#5E448B',
         id: 'zrx',
-        kyber: 'ETH_ZRX',
+        kyber: 'ZRX',
         rop: false
     },
     bnb: {
@@ -443,7 +444,7 @@ var coinsData = {
         fullname: 'Binance',
         color: '#5E448B',
         id: 'bnb',
-        kyber: 'ETH_BNB',
+        kyber: 'BNB',
         rop: false
     },
     rep: {
@@ -451,7 +452,7 @@ var coinsData = {
         fullname: 'Augur',
         color: '#5E448B',
         id: 'rep',
-        kyber: 'ETH_REP',
+        kyber: 'REP',
         rop: false
     },
     mas: {
@@ -459,7 +460,7 @@ var coinsData = {
         fullname: 'MidasProtocol',
         color: '#5E448B',
         id: 'mas',
-        kyber: 'ETH_MAS',
+        kyber: 'MAS',
         rop: false
     }
 }

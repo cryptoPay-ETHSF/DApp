@@ -13,8 +13,10 @@ db.ref('links').on('value', function(snapshot) {
         Object.keys(data[key])
         .forEach(function (links, i) {
             count.links++;
-            count.total_transaction = count.total_transaction + data[key][links].total_transaction;
-            count.dai_collected = count.dai_collected + data[key][links].DAI_collected;
+            if (links == account) {
+                count.total_transaction = count.total_transaction + data[key][links].total_transaction;
+                count.dai_collected = count.dai_collected + data[key][links].DAI_collected;
+            }
         });
     });
     $('#active_payments').text(count.links);

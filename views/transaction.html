@@ -5,6 +5,12 @@
 <link rel="stylesheet" href="css/fontawesome/css/font-awesome.css" />
 <link href="css/bootstrap.min.css"  rel="stylesheet"/>
 <link href="css/style.css"  rel="stylesheet" />
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script src="js/fire.js"></script>
 </head>
 <body class="body_transactions">
       <!--[if lt IE 7]>
@@ -18,18 +24,18 @@
                     <div class="transactions_inr">
                         <div class="transact_info_block">
                             <div class="transact_info_left">
-                                <span class="transact_price museo_sans_rounded500">10.00</span>
+                                <span class="transact_price museo_sans_rounded500" id="transact_amount"></span>
                                 <span class="transact_currency">DAI</span>
                             </div>
                             <div class="transact_info_right">
-                                <span class="transact_name">Random Product</span>
-                                <span class="transact_desc">This is for testing</span>
+                                <span class="transact_name" id="transact_name"></span>
+                                <span class="transact_desc" id="transact_desc"></span>
                             </div>
                         </div>
                         <div class="transact_imp_block">
 
                             <!-- all the magic happens here -->
-                            <div id="information_block" class="transact_information animated">
+                           <!-- <div id="information_block" class="transact_information animated">
                                 <div class="transact_info_title museo_sans_rounded500">
                                         Please enter the details
                                 </div>
@@ -62,7 +68,7 @@
                                                 </div>
                                         </form>
                                 </div>
-                            </div>
+                            </div>  -->
 
                             <div id="payments_block" class="transact_payments_currency animated">
 
@@ -71,19 +77,19 @@
                                                 <div class="transact_single_block">
                                                     <label class="museo_sans_rounded500">Amount</label>
                                                     <div class="transact_field">
-                                                        <input type="text" id="transact_value" value="0.000198435 BTC (10 DAI)" readonly />
+                                                        <input type="text" id="transact_value" readonly />
                                                         <span class="transact_copy" data-clipboard-target="#transact_value"><i class="fa fa-clone" aria-hidden="true"></i></span>
                                                     </div>
                                                 </div>
                                                 <div class="transact_single_block">
-                                                        <label class="museo_sans_rounded500 payment_label">Bitcoin Address</label>
+                                                        <label class="museo_sans_rounded500 payment_label">Address</label>
                                                         <div class="transact_field">
-                                                                <input id="transact_address" type="text" value="5w4nkq234ik43b2q3" readonly />
+                                                                <input id="transact_address" type="text" readonly />
                                                                 <span class="transact_copy" data-clipboard-target="#transact_address"><i class="fa fa-clone" aria-hidden="true"></i></span>
                                                         </div>
                                                         
                                                 </div>
-            
+
                                                 <div class="transact_single_block text-center mt-2" style="    position: absolute;
                                                 bottom: 0;
                                                 width: 90%;">
@@ -442,12 +448,6 @@
             </div>
         </div>
     
-    
-
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/clipboard.min.js"></script>
 <script src="js/transactions.js"></script>
 </body>
 </html>

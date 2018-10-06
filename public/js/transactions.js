@@ -178,3 +178,36 @@ function payment_method(pay_status) {
     }
 
 }
+
+Object.keys(coinsData)
+    .sort()
+    .forEach(function (key, i) {
+    // if (coinsData[key].rop) {
+        var forClass = `${coinsData[key].id + 'ForColor'}`;
+        var color = coinsData[key].color;
+        var html = `<div class="selectCoinsClick ${forClass}" onclick="funcToSelect('${coinsData[key].id}')">
+                        <div class="logoNameBox">
+                            <div class="logoBox">
+                                <img src="https://easwap.com/logos/${coinsData[key].id}.svg" style="width:54px; height:54px">
+                            </div>
+                            <div class="nameCodeBox">
+                                <div class="nameBox">${coinsData[key].name}</div>
+                                <div class="nameToken">${coinsData[key].fullname}</div>
+                            </div>
+                        </div>
+                    </div>`;
+        
+        if (key != "dai" && key != "eth") {
+            $(".coinSelectContainer").append(html);
+        } else if (key == "eth") {
+            $(".ethBoxClick").append(html);
+        } else if (key == "dai") {
+            $(".daiBoxClick").append(html);
+        }
+    // }
+});
+
+$('.changeTokenBut').click(function() {
+    console.log('adhuj');
+    $('.coinsBox').show();
+});

@@ -1182,10 +1182,10 @@ span.accept_pay_link_copy {
     width: 100%;
     float: left;
 }
-.selectCoinBox:hover{
+.selectCoinbox:hover{
     box-shadow: 0px 0px 8px 8px #bbc3e2;
 }
-.selectCoinBox {
+.selectCoinbox {
     padding: 16px 10px;
     box-sizing: border-box;
     cursor: pointer;
@@ -1194,10 +1194,109 @@ span.accept_pay_link_copy {
     color: #fff;
     width: calc(15% - 10px);
     float: left;
-    box-shadow: 0px 0px 2px 2px #bbc3e2;
+    box-shadow: 0px 0px 2px 2px white;
     margin: 12px 15px;
 }
 
 .forBoxMargin {
     margin-left: 15px;
+}
+
+.selectCoinsClick {
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.1s linear;
+    color: var(--main-white);
+    box-shadow: 0px 0px 2px 2px rgb(199, 199, 199);
+}
+
+.selectCoinsClick:hover {
+    box-shadow: 0px 0px 6px 6px rgb(199, 199, 199);
+}
+
+.logoNameBox {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.logoBox,
+.nameBox,
+.nameCodeBox {
+    margin: auto;
+}
+
+.nameToken {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.nameBox {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.coinsBox {
+    position: fixed;
+    background-color: rgba(32, 19, 69, 0.9);
+    color: white;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.coinsBoxesContainer {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    overflow: scroll;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.coinSelectContainer {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 30px;
+    margin: auto;
+}
+
+.ethDaiOneLine {
+    display: flex;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.ethBoxClick, .daiBoxClick {
+    width: 25%;
+    margin: auto;
+}
+
+.selectCoinDetail {
+    width: 50%;
+    margin: auto;
+}
+
+.changeTokenBut {
+    padding: 4px 30px;
+    margin: auto;
+    width: max-content;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #5244D4;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
 }

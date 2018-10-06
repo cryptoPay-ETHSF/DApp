@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crypto Pay</title>
+<link rel="stylesheet" href="css/fontawesome/css/font-awesome.css" />
+<link href="css/bootstrap.min.css"  rel="stylesheet"/>
+<link href="css/style.css"  rel="stylesheet" />
+</head>
+<body class="body_transactions">
+      <!--[if lt IE 7]>
+        <p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+      <!-- Header -->
+    <div class="container-fluid m-0 px-0 float-left">
+        <div class="row m-0 p-0">
+            <div class="transaction_super_main mx-auto p-0">
+                <div class="transactions_main">
+                    <div class="transactions_inr">
+                        <div class="transact_info_block">
+                            <div class="transact_info_left">
+                                <span class="transact_price museo_sans_rounded500">10.00</span>
+                                <span class="transact_currency">DAI</span>
+                            </div>
+                            <div class="transact_info_right">
+                                <span class="transact_name">Random Product</span>
+                                <span class="transact_desc">This is for testing</span>
+                            </div>
+                        </div>
+                        <div class="transact_imp_block">
+
+                            <!-- all the magic happens here -->
+                            <div id="information_block" class="transact_information animated">
+                                <div class="transact_info_title museo_sans_rounded500">
+                                        Please enter the details
+                                </div>
+                                <div class="form_transaction">
+                                        <form id="information_form">
+                                                <div class="information_block">
+                                                    <div class="transact_field">
+                                                        <input type="text" id="fullname" placeholder="Full name"/>
+                                                    </div>
+                                                </div>
+                                                <div class="information_block">
+                                                        <div class="transact_field">
+                                                            <input type="email" id="email" placeholder="Email" />
+                                                        </div>
+                                                </div>
+                                                <div class="information_block">
+                                                        <div class="transact_field">
+                                                            <input type="number" id="phone" placeholder="Phone" />
+                                                        </div>
+                                                </div>
+                                                <div class="information_block">
+                                                        <div class="transact_field">
+                                                            <textarea type="text" id="address" placeholder="Address"></textarea>
+                                                        </div>
+                                                </div>
+                                                <div class="information_block text-center mt-20" style="    position: absolute;
+                                                bottom: 0;
+                                                width: 90%;">
+                                                    <input type="submit" class="btn btn-crypto museo_sans_rounded500" value="Next" />
+                                                </div>
+                                        </form>
+                                </div>
+                            </div>
+
+                            <div id="payments_block" class="transact_payments_currency animated">
+
+                                <div class="form_transaction">
+                                        <form id="transact_form">
+                                                <div class="transact_single_block">
+                                                    <label class="museo_sans_rounded500">Amount</label>
+                                                    <div class="transact_field">
+                                                        <input type="text" id="transact_value" value="0.000198435 BTC (10 DAI)" readonly />
+                                                        <span class="transact_copy" data-clipboard-target="#transact_value"><i class="fa fa-clone" aria-hidden="true"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="transact_single_block">
+                                                        <label class="museo_sans_rounded500 payment_label">Bitcoin Address</label>
+                                                        <div class="transact_field">
+                                                                <input id="transact_address" type="text" value="5w4nkq234ik43b2q3" readonly />
+                                                                <span class="transact_copy" data-clipboard-target="#transact_address"><i class="fa fa-clone" aria-hidden="true"></i></span>
+                                                        </div>
+                                                        
+                                                </div>
+            
+                                                <div class="transact_single_block text-center mt-2" style="    position: absolute;
+                                                bottom: 0;
+                                                width: 90%;">
+                                                    <input type="submit" class="btn btn-crypto  float-left museo_sans_rounded500" value="Pay Now" style="    padding: 12px 25px;
+                                                    width: 47%;
+                                                    font-size: 14px;" />
+                                                    <button type="button" class="btn btn-crypto float-right museo_sans_rounded500 paybyloan" style="    padding: 12px 25px;
+                                                    width: 47%;
+                                                    font-size: 14px;">Pay By Loan</button>
+                                                </div>
+                                            </form>
+                                </div>
+                            </div>
+                            
+                            <div id="payment_status" class="transact_payments_status animated">
+
+
+                                    <div class="transact_payment_status_title text-center museo_sans_rounded500 my-4">
+                                            Payment Successful
+                                    </div>
+
+                                    <div class="transact_status_report museo_sans_rounded700 text-center">
+                                        <span class="pe-12x pe-7s-check text-crypto"></span>
+                                    </div>
+
+                            </div>
+
+                            <!-- all the magic happens here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="transaction_footer text-crypto text-center h5 mb-0 mt-3 float-left museo_sans_rounded700">
+                    cryptoPay
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="transaction_currency_main">
+        <div class="col-sm-12 float-left"><span class="transaction_currency_close pe-7s-close"></span></div>
+        <div class="transaction_currency_inr">
+
+                <div class="main_standouts">
+                        <div class="selectCoinBox select_f_block float-left" data-currency="eth">
+                                <div class="logoNameBox">
+                                    <div class="logoBox">
+                                            <img src="images/currency/eth.png" style="width:48px; height:48px">
+                                    </div>
+                                    <div class="nameCodeBox">
+                                        <div class="nameBox">ETH</div>
+                                        <div class="nameToken">Ethereum</div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="select_m_block">
+                                <div class="select_m_title">SELECT TOKEN TO PAY</div>
+                        </div>
+                        <div class="selectCoinBox select_f_block float-right" data-currency="dai">
+                                <div class="logoNameBox">
+                                    <div class="logoBox">
+                                        <img src="images/currency/dai.svg" style="width:48px; height:48px">
+                                    </div>
+                                    <div class="nameCodeBox">
+                                        <div class="nameBox">DAI</div>
+                                        <div class="nameToken">Dai</div>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+    
+                <div class="transaction_currency_inr_sec">
+                    <div class="selectCoinBox adxForColor" data-currency="adx">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/adx.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">ADX</div>
+                                    <div class="nameToken">AdEx</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox appcForColor" data-currency="appc">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/appc.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">APPC</div>
+                                    <div class="nameToken">AppCoins</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox astForColor" data-currency="ast">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/ast.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">AST</div>
+                                    <div class="nameToken">AirSwap</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox batForColor" data-currency="bat">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/bat.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">BAT</div>
+                                    <div class="nameToken">Basic Attention Token</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox bboForColor" data-currency="bbo">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/bbo.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">BBO</div>
+                                    <div class="nameToken">Bigbom</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox elfForColor" data-currency="elf">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/elf.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">ELF</div>
+                                    <div class="nameToken">Aelf</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox engForColor" data-currency="eng">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/eng.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">ENG</div>
+                                    <div class="nameToken">Enigma</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="selectCoinBox ethosForColor" data-currency="ethos">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/ethos.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">ETHOS</div>
+                                    <div class="nameToken">Ethos</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox gtoForColor" data-currency="gto">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/gto.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">GTO</div>
+                                    <div class="nameToken">Gifto</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox iostForColor" data-currency="iost">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/iost.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">IOST</div>
+                                    <div class="nameToken">IOStoken</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox kncForColor" data-currency="knc">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/knc.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">KNC</div>
+                                    <div class="nameToken">Kybernetwork</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox linkForColor" data-currency="link">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/link.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">LINK</div>
+                                    <div class="nameToken">Chain Link</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox manaForColor" data-currency="mana">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/mana.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">MANA</div>
+                                    <div class="nameToken">Decentraland</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox omgForColor" data-currency="omg">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/omg.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">OMG</div>
+                                    <div class="nameToken">OmiseGo</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox powrForColor" data-currency="powr">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/powr.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">POWR</div>
+                                    <div class="nameToken">Power Ledger</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox rcnForColor" data-currency="rcn">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/rcn.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">RCN</div>
+                                    <div class="nameToken">Ripio Credit Network</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox rdnForColor" data-currency="rdn">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/rdn.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">RDN</div>
+                                    <div class="nameToken">Raiden</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox reqForColor" data-currency="req">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/req.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">REQ</div>
+                                    <div class="nameToken">Request</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox saltForColor" data-currency="salt">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/salt.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">SALT</div>
+                                    <div class="nameToken">Salt</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox sntForColor" data-currency="snt">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/snt.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">SNT</div>
+                                    <div class="nameToken">Status</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox stormForColor" data-currency="storm">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/storm.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">STORM</div>
+                                    <div class="nameToken">Storm</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectCoinBox zilForColor" data-currency="zil">
+                            <div class="logoNameBox">
+                                <div class="logoBox">
+                                    <img src="images/currency/zil.png" style="width:48px; height:48px">
+                                </div>
+                                <div class="nameCodeBox">
+                                    <div class="nameBox">ZIL</div>
+                                    <div class="nameToken">Zilliqa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="take_cdps_block" class="take_cdps_main_block">
+            <div class="take_cdps_inr">
+                <div class="take_cdps_inr_main">
+                    <div class="take_cdp_title_block">
+                        <span class="take_cdp_title float-left">Take Loan</span>
+                        <span class="take_cdp_close float-right pe-7s-close"></span>
+                    </div>
+        
+                    <div class="take_cdp_form">
+                        <div class="take_cdp_error">
+        
+                        </div>
+                        <form id="take_cdps">
+                            <div class="take_cdp_single">
+                                <label class="museo_sans_rounded500 payment_label">ETH as Collateral</label>
+                                <input type="number" placeholder="ETH as Collateral" value="0" id="cdp_collatoral_name">
+                            </div>
+                            <div class="take_cdp_single">
+                                    <label class="museo_sans_rounded500 payment_label">DAI against ETH</label>
+                                    <input type="number" placeholder="DAI against ETH" value="0" id="cdp_dai_against_eth">
+                            </div>
+                            <div class="take_cdp_single">
+                                    <label class="museo_sans_rounded500 payment_label">% of DAI</label>
+                                    <input type="number" placeholder="% of DAI" value="33" id="cdp_perc_dai">
+                            </div>
+                            <div class="take_cdp_single">
+                                    <label class="museo_sans_rounded500 payment_label">Balance ETH</label>
+                                    <input type="number" id="cdp_bal_eth">
+                            </div>
+                            <div class="take_cdp_single">
+                                    <input type="submit" value="Get Loan">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/transactions.js"></script>
+</body>
+</html>

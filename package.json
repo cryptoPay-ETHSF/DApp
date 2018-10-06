@@ -1,0 +1,16 @@
+{
+  "name": "cryptopay",
+  "version": "1.0.0",
+  "description": "Beyound Payments",
+  "main": "cryptoPay.js",
+  "scripts": {
+    "test": "cryptoPay"
+  },
+  "author": "InstaDapp Team",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "nunjucks": "^3.1.3"
+  }
+}

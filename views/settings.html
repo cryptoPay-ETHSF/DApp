@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Crypto Pay</title>
+
+<link rel="stylesheet" href="css/fontawesome/css/font-awesome.css" />
+<link href="css/bootstrap.min.css"  rel="stylesheet"/>
+<link href="css/style.css"  rel="stylesheet" />
+</head>
+<body class="main">
+  <!--[if lt IE 7]>
+    <p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <!-- Header -->
+
+  <header>
+        <div class="container-fluid p-0 m-0">
+            <div class="row m-0 p-0">
+                <div class="col-sm-12 p-0 m-0">
+                    <div class="col-sm-4 float-left text-left museo_sans_rounded700 h3 logo mb-0">
+                        <a href="./dashboard.html">
+                            cryptoPay
+                        </a>
+                    </div>
+                    <div class="col-sm-8 float-right text-right">
+                        <nav role="navigation">
+                            <div class="navbar-right mt-2">
+                              <ul class="nav navbar-nav no-borders">
+                                <li class="mobile_active">
+                                        <a href="./settings.html">
+                                            <span class="fa fa-cog" style="vertical-align: middle;font-size: 14px;"></span>
+                                        </a>
+                                </li> 
+                                <li>
+                                    <a href="https://kovan.etherscan.io/" >
+                                        <span style="font-size: 12px;line-height: 20px;vertical-align: middle;letter-spacing: 1px;">KOVAN</span>
+                                        <span class="fa fa-circle" style="vertical-align: middle;font-size: 14px;"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" >
+                                        <span style="font-size: 12px;line-height: 20px;vertical-align: middle;color: #ffffff;">HELP</span>
+                                        <span class="pe-7s-help1" style="vertical-align: middle;color: #fff; font-size: 18px;"></span>
+                                    </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </header>
+
+  <div class="container-fluid mx-0 p-0 float-left" style="margin-top: 57px;">
+
+<div class="row m-0 p-0">
+    <div class="float-left sidebar_left">
+        <div class="main_nav">
+            <ul class="m-0 p-0 list-unstyled float-left">
+                <li><a href="./dashboard"><span class="pe-7s-home"></span>Dashboard</a></li>
+                <li><a class="accept_payments"><span class="pe-7s-plus"></span>Accept Payments</a></li>
+                <li><a href="./manage_cdp"><span class="pe-7s-cash"></span>Manage CDP</a></li>
+                <li class="active"><a href="./settings"><span class="pe-7s-paper-plane"></span>Settings</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="float-right main_content">
+            <div class="normalheader">
+                <div class="cta">
+                    <div class="cta_body">
+                        <div style="display: block; float: right;margin-top: 20px;margin-right: 25px;">
+                        <button class="btn btn-crypto accept_payments">
+                            Accept Payments
+                        </button>
+                        </div>
+                        <h3 class="text-crypto museo_sans_rounded500">
+                            cryptoPay - beyond Payments (Anytoken, Anywhere)
+                        </h3>
+                        <div class="museo_sans_rounded500 font-bold" style="margin-bottom: 10px;">
+                            Using Kyber Network, MakerDAO and Smart Contracts
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dashboard blocks display here -->
+
+            <!-- total payments block -->
+            <div class="settings_block">
+                    <div class="col-sm-12 m-0 p-0">
+                        <div class="title_block">Settings</div>
+                    </div>
+                    <div class="settings_form col-sm-7 col-xl-5 mx-0 my-3 p-0">
+                            <form id="settings_form">
+                                    <div class="form-group row">
+                                      <label for="inputEmail3" class="col-sm-4 col-form-label museo_sans_rounded700">% of ETH</label>
+                                      <div class="col-sm-6">
+                                        <input type="number" min="0" max="100" value="0" class="form-control text-center" id="eth_percentage" placeholder="#ETH %">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="inputPassword3" class="col-sm-4 col-form-label museo_sans_rounded700">% of DAI</label>
+                                      <div class="col-sm-6">
+                                        <input type="number" value="100" min="0" max="100"  class="form-control text-center" id="dai_percentage" placeholder="#DAI %">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <div class="col-sm-10 text-right">
+                                        <div class="col-sm-8 float-right pr-0" style="max-width:270px">
+                                            <button type="submit" class="col-sm-12 btn btn-crypto">Save</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                            </form>
+                    </div>
+            </div>
+            <!-- total payments block -->
+    </div>
+</div>
+
+  </div>
+
+<!-- take loan block -->
+  <div id="take_cdps_block" class="take_cdps_main_block">
+        <div class="take_cdps_inr">
+            <div class="take_cdps_inr_main">
+                <div class="take_cdp_title_block">
+                    <span class="take_cdp_title float-left">Take Loan</span>
+                    <span class="take_cdp_close float-right pe-7s-close"></span>
+                </div>
+    
+                <div class="take_cdp_form">
+                    <div class="take_cdp_error">
+    
+                    </div>
+                    <form id="take_cdps">
+                        <div class="take_cdp_single">
+                            <label class="museo_sans_rounded500 payment_label">ETH as Collateral</label>
+                            <input type="number" placeholder="ETH as Collateral" value="0" id="cdp_collatoral_name">
+                        </div>
+                        <div class="take_cdp_single">
+                                <label class="museo_sans_rounded500 payment_label">DAI against ETH</label>
+                                <input type="number" placeholder="DAI against ETH" value="0" id="cdp_dai_against_eth">
+                        </div>
+                        <div class="take_cdp_single">
+                                <label class="museo_sans_rounded500 payment_label">% of DAI</label>
+                                <input type="number" placeholder="% of DAI" value="33" id="cdp_perc_dai">
+                        </div>
+                        <div class="take_cdp_single">
+                                <label class="museo_sans_rounded500 payment_label">Balance ETH</label>
+                                <input type="number" id="cdp_bal_eth">
+                        </div>
+                        <div class="take_cdp_single">
+                                <input type="submit" value="Get Loan">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- accept payments block -->
+<div class="accept_payments_main_block">
+        <div class="accept_payments_inr">
+            <div class="accept_payments_inr_main">
+                <div class="accept_pay_title_block">
+                    <span class="accept_pay_title float-left">Product Information</span>
+                    <span class="accept_pay_close float-right pe-7s-close"></span>
+                </div>
+    
+                <div id="accept_pay_collect_information" class="accept_pay_form">
+                    <div class="accept_pay_error">
+    
+                    </div>
+                    <form id="accept_payments">
+                        <div class="accept_pay_single">
+                            <input type="text" placeholder="Product Name" id="accept_pay_name" />
+                        </div>
+                        <div class="accept_pay_single">
+                            <textarea rows="4" placeholder="Brief Description" id="accept_pay_desc"></textarea>
+                        </div>
+                        <div class="accept_pay_single">
+                            <div class="accept_pay_fh">
+                                <input type="number" min="0" value="0" placeholder="Enter the price" id="accept_pay_price" />
+                            </div>
+                            <div class="accept_pay_sh">
+                                <select id="accept_pay_currecy">
+                                    <option value="DAI">DAI</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="accept_pay_single">
+                            <div class="accept_pay_single_collect_info">
+                                What Information Do You collect from Customers
+                            </div>
+                            <div class="accept_pay_single">
+                                <div class="checkbox-container">
+                                        <input type="checkbox" id="accept_pay_dont_collect_info" value="accept_pay_dont_collect_info"/>
+                                        <label class="checkbox" for="accept_pay_dont_collect_info"></label>
+                                        <label for="accept_pay_dont_collect_info">Do Not Collect Information</label>
+                                </div>
+                            </div>
+                            <div class="accept_pay_ff">
+                                <div class="checkbox-container">
+                                        <input type="checkbox" id="accept_pay_firstname" value="accept_pay_firstname"/>
+                                        <label class="checkbox" for="accept_pay_firstname"></label>
+                                        <label for="accept_pay_firstname">First name</label>
+                                </div>
+                            </div>
+                            <div class="accept_pay_ff">
+                                    <div class="checkbox-container">
+                                            <input type="checkbox" id="accept_pay_email" value="accept_pay_email"/>
+                                            <label class="checkbox" for="accept_pay_email"></label>
+                                            <label for="accept_pay_email">Email</label>
+                                    </div>
+                            </div>
+                            <div class="accept_pay_ff">
+                                    <div class="checkbox-container">
+                                            <input type="checkbox" id="accept_pay_phone" value="accept_pay_phone"/>
+                                            <label class="checkbox" for="accept_pay_phone"></label>
+                                            <label for="accept_pay_phone">Phone</label>
+                                    </div>
+                            </div>
+                            <div class="accept_pay_ff">
+                                    <div class="checkbox-container">
+                                            <input type="checkbox" id="accept_pay_address" value="accept_pay_address"/>
+                                            <label class="checkbox" for="accept_pay_address"></label>
+                                            <label for="accept_pay_address">Address</label>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="accept_pay_single">
+                                <input type="submit" value="Next" />
+                        </div>
+                    </form>
+                </div>
+                <div id="accept_pay_build_link" class="accept_pay_build_link">
+                    <div class="accept_pay_build_prod">
+                        <div class="accept_pay_build_prod_left">
+                            <div class="accept_pay_build_prod_title_blk">
+                                <span class="accept_pay_build_title">Test Product</span>
+                                <span class="accept_pay_build_desc">efgazcd</span>
+                            </div>
+                        </div>
+                        <div class="accept_pay_sharelink_text">
+                            Share Link to start accepting payments
+                        </div>
+                        <div class="accept_pay_link_block">
+                                <div class="accept_pay_link_title">Link</div>
+                                <div class="accept_pay_link_box">
+                                    <input type="text" value="https://testlink.com/aoyuh676adsfg9087av" id="accept_pay_build" readonly/>
+                                    <span class="accept_pay_link_copy" data-clipboard-target="#accept_pay_build"><i class="fa fa-clone" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                        </div>
+    
+                        <div class="accept_pay_footer_done">
+                            <button class="btn btn-crypto py-1 done_btn float-right px-4">Done</button>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- accept payments block end -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/accept_payments.js"></script>
+</body>
+</html>

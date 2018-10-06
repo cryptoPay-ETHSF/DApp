@@ -1,3 +1,46 @@
+var link_id;
+var dataObj = {};
+
+function getQueryParams() {
+    let querystring = window.location.search.substring(1);
+    let divide = querystring.split('&');
+    for (var i = 0; i < divide.length; i++) {
+        let keyValPair = divide[i].split('=');
+        dataObj[keyValPair[0]] = keyValPair[1];
+    }
+    link_id = dataObj.id;
+}
+
+getQueryParams();
+
+db.ref('links').on('value', function(snapshot) {
+    var count = {
+        name : "",
+        description : "",
+        amount : 0,
+        address : "",
+    };
+    var data = snapshot.val();
+    Object.keys(data)
+    .forEach(function (key, i) {
+        Object.keys(data[key])
+        .forEach(function (links, i) {
+            if (links == link_id) {
+                count.name = data[key][links].name;
+                count.description = data[key][links].desc;
+                count.amount = data[key][links].price;
+                count.address = key;
+            }
+        });
+    });
+    $('#transact_name').text(count.name);
+    $('#transact_desc').text(count.description);
+    $('#transact_amount').text(count.amount);
+    $('#transact_value').val(count.amount);
+    $('#transact_address').val(count.address);
+});
+
+
 var clipboardDemos = new ClipboardJS('.transact_copy');
 clipboardDemos.on('success', function(e) {
     e.clearSelection();
@@ -57,7 +100,7 @@ $('#information_form').submit(function(e){
         // form submit takes place here on successfull form submission return here
 
         $("#information_block").css('display','none');
-        $("#payments_block").css('display','block');
+        
 
     }else{
         $(".transact_info_title").addClass('red');
@@ -66,7 +109,7 @@ $('#information_form').submit(function(e){
 
 });
 
-
+$("#payments_block").css('display','block');
 
 $('.paybyloan').on('click',function () {
     $('#take_cdps_block').fadeIn();

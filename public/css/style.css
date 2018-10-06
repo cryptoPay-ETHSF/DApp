@@ -1197,3 +1197,7 @@ span.accept_pay_link_copy {
     box-shadow: 0px 0px 2px 2px #bbc3e2;
     margin: 12px 15px;
 }
+
+.forBoxMargin {
+    margin-left: 15px;
+}

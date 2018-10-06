@@ -109,7 +109,7 @@ $('#transact_form').submit(function(e){
     // payment functionality goes here
     console.log(transact_value +"--- ---"+ transact_address);
     // ends here
-    var payment_status = false;
+    var payment_status = true;
 
     payment_method(payment_status);
 

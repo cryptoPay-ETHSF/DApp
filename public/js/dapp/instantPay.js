@@ -46,6 +46,8 @@ function InstaPay() {
 
 var link_id;
 var dataObj = {};
+var count = {};
+var paymentOwner;
 function getQueryParams() {
     let querystring = window.location.search.substring(1);
     let divide = querystring.split('&');
@@ -57,20 +59,21 @@ function getQueryParams() {
     console.log(link_id);
     var payTo = $('#transact_address').val();
     console.log(payTo);
-    db.ref(`links/${payTo}/${link_id}`).on('value', function(snap) {
+    db.ref(`links`).on('value', function(snap) {
         var data = snap.val();
         console.log(data);
-        // Object.keys(data)
-        // .forEach(function (key, i) {
-        //     Object.keys(data[key])
-        //     .forEach(function (links, i) {
-        //         if (links == link_id) {
-        //             count.dai_received = data[key][links].DAI_collected;
-        //             count.no_of_transactions = data[key][links].total_transactions;
-        //             console.log(count.dai_received + ":" + count.no_of_transactions);
-        //         }
-        //     });
-        // });
+        Object.keys(data)
+        .forEach(function (key, i) {
+            Object.keys(data[key])
+            .forEach(function (links, i) {
+                if (links == link_id) {
+                    count.price = data[key][links].price;
+                    count.dai_received = data[key][links].DAI_collected;
+                    count.no_of_transactions = data[key][links].total_transaction;
+                    paymentOwner = key;
+                }
+            });
+        });
     });
 }
 
@@ -89,12 +92,18 @@ function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
             $('.transact_payment_status_title').html('Payment Successful');
             $('.transact_status_report span').removeClass('pe-7s-close text-danger');
             $('.transact_status_report span').addClass('pe-7s-check text-crypto');
+            db.ref(`links/${paymentOwner}/${link_id}/DAI_collected`).set(count.dai_received+1).then((snap) => {
+                key = snap.key;
+                console.log(key);
+             });
+            db.ref(`links/${paymentOwner}/${link_id}/total_transaction`).set(Number(count.no_of_transactions)+Number(count.price)).then((snap) => {
+                key = snap.key;
+                console.log(key);
+            });
         } else {
             alert(err);
         };
     });
 }
 
-setTimeout(function(){
-    getQueryParams();
-}, 3000);
+getQueryParams();

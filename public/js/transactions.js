@@ -38,7 +38,7 @@ db.ref('links').on('value', function(snapshot) {
     $('#transact_name').text(count.name);
     $('#transact_desc').text(count.description);
     $('#transact_amount').text(count.amount);
-    $('#transact_value').val(count.amount);
+    $('#transact_value').val(`${count.amount} DAI`);
     $('#transact_address').val(count.address);
 });
 

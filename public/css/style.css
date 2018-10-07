@@ -254,7 +254,7 @@ background-color: #5244d4;
     font-size: 19px;
     line-height: 1.2;
 }.transact_currency {
-    color: #a3abb8;
+    /* color: #a3abb8; */
     margin-top: 7px;
     width: 100%;
     float: left;
@@ -262,7 +262,7 @@ background-color: #5244d4;
     text-transform: uppercase;
     font-family: 'museo_sans_rounded700';
     font-size: 16px;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
 }.transact_info_right {
     width: 70%;
     float: right;
@@ -1289,14 +1289,15 @@ span.accept_pay_link_copy {
 }
 
 .changeTokenBut {
-    padding: 4px 30px;
+    padding: 8px 30px;
     margin: auto;
+    margin-bottom: 20px;
     width: max-content;
     box-sizing: border-box;
     text-align: center;
     background-color: #5244D4;
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 14px;
     cursor: pointer;
 }

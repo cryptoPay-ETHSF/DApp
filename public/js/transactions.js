@@ -187,6 +187,7 @@ Object.keys(coinsData)
     // if (coinsData[key].rop) {
         var forClass = `${coinsData[key].id + 'ForColor'}`;
         var color = coinsData[key].color;
+        var color = coinsData[key].color;
         var html = `<div class="selectCoinsClick ${forClass}" onclick="funcToSelect('${coinsData[key].name}')">
                         <div class="logoNameBox">
                             <div class="logoBox">

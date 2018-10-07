@@ -1305,3 +1305,17 @@ span.accept_pay_link_copy {
 #getDaiBal, #getEthBal {
     color: white;
 }
+
+.check_trx {
+    padding: 10px 87px;
+    margin: auto;
+    margin-top: 36px;
+    width: max-content;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #5244D4;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}

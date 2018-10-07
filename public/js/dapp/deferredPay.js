@@ -12,9 +12,11 @@ function DeferredPay() {
     // console.log(payTo, SrcAmt, "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 0);
     CPDeferPay.DeferredPay(payTo, SrcAmt, "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 0, payObj, function(err, res) {
         if (!err) {
+            var rURL = `https://kovan.etherscan.io/tx/${res}`;
+            $('.check_trx').html(`<a href="${rURL}" target="_blank" style="color:white;text-decoration:none;">Check Txn Status</a>`);
             $("#payments_block").css('display','none');
             $("#payment_status").css('display','block');
-            $('.transact_payment_status_title').html('Check Deferred Pay Status');
+            $('.transact_payment_status_title').html('Tx sent to Blockchain');
             $('.transact_status_report span').removeClass('pe-7s-close text-danger');
             $('.transact_status_report span').addClass('pe-7s-check text-crypto');
             // alert('Your transaction has been sent to blockchain.');

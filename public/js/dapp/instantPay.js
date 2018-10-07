@@ -87,9 +87,13 @@ function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
     }
     CPInstaPay.InstantPay(payTo, TknAddr, SrcAmt, USDAmt, payObj, function(err, res) {
         if (!err) {
+
+            var rURL = `https://ropsten.etherscan.io/tx/${res}`;
+            $('.check_trx').html(`<a href="${rURL}" target="_blank" style="color:white;text-decoration:none;">Check Txn Status</a>`);
+
             $("#payments_block").css('display','none');
             $("#payment_status").css('display','block');
-            $('.transact_payment_status_title').html('Payment Successful');
+            $('.transact_payment_status_title').html('Tx sent to Blockchain');
             $('.transact_status_report span').removeClass('pe-7s-close text-danger');
             $('.transact_status_report span').addClass('pe-7s-check text-crypto');
             db.ref(`links/${paymentOwner}/${link_id}/DAI_collected`).set(count.dai_received+Number(count.price)).then((snap) => {

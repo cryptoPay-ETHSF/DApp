@@ -15,8 +15,7 @@ function funcToSelect(coinOneName) {
             var valueToPopulate = rateVal / 10**tknDecimals * USDAmt;
             console.log(valueToPopulate);
             ChangedTknSrcAmt = rateVal * USDAmt;
-            $('#transact_value').val(`${valueToPopulate.toFixed(2)} ${coinOneName}`);
-            $('#transact_value').attr('', '');
+            $('#transact_value').val(`${valueToPopulate.toFixed(3)} ${coinOneName}`);
         } else {
             console.log(err);
         };

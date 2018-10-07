@@ -44,6 +44,36 @@ function InstaPay() {
     }
 }
 
+var link_id;
+var dataObj = {};
+function getQueryParams() {
+    let querystring = window.location.search.substring(1);
+    let divide = querystring.split('&');
+    for (var i = 0; i < divide.length; i++) {
+        let keyValPair = divide[i].split('=');
+        dataObj[keyValPair[0]] = keyValPair[1];
+    }
+    link_id = dataObj.id;
+    console.log(link_id);
+    var payTo = $('#transact_address').val();
+    console.log(payTo);
+    db.ref(`links/${payTo}/${link_id}`).on('value', function(snap) {
+        var data = snap.val();
+        console.log(data);
+        // Object.keys(data)
+        // .forEach(function (key, i) {
+        //     Object.keys(data[key])
+        //     .forEach(function (links, i) {
+        //         if (links == link_id) {
+        //             count.dai_received = data[key][links].DAI_collected;
+        //             count.no_of_transactions = data[key][links].total_transactions;
+        //             console.log(count.dai_received + ":" + count.no_of_transactions);
+        //         }
+        //     });
+        // });
+    });
+}
+
 function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
     var CPInstaPay = web3.eth.contract(cryptoPayABI).at(RopstenCP);
     var payObj = {
@@ -59,9 +89,12 @@ function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
             $('.transact_payment_status_title').html('Payment Successful');
             $('.transact_status_report span').removeClass('pe-7s-close text-danger');
             $('.transact_status_report span').addClass('pe-7s-check text-crypto');
-            // alert('Your transaction has been sent to blockchain.');
         } else {
             alert(err);
         };
     });
 }
+
+setTimeout(function(){
+    getQueryParams();
+}, 3000);

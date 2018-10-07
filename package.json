@@ -2,9 +2,10 @@
   "name": "cryptopay",
   "version": "1.0.0",
   "description": "Beyound Payments",
-  "main": "cryptoPay.js",
+  "main": "server.js",
   "scripts": {
-    "test": "cryptoPay"
+    "start": "node server.js",
+    "debug": "node debug server.js"
   },
   "author": "InstaDapp Team",
   "license": "ISC",

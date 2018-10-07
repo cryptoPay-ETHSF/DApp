@@ -29,5 +29,7 @@ function daiBalance(user_add, coin_name) {
     });
 }
 
-ethBalance(account);
-daiBalance(account, 'DAI');
+setInterval(function() {
+    ethBalance(account);
+    daiBalance(account, 'DAI');
+}, 250);

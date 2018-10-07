@@ -1301,3 +1301,7 @@ span.accept_pay_link_copy {
     font-size: 14px;
     cursor: pointer;
 }
+
+#getDaiBal, #getEthBal {
+    color: white;
+}

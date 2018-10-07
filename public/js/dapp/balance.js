@@ -9,19 +9,14 @@ function ethBalance(user_add) {
     });
 }
 
-coinTwoContract = web3.eth.contract(tokensAbi).at(coinTwoAdd);
-coinTwoContract.balanceOf(account, function (err, res) {
-    if (!err) {
-        coinTwoQtyInWei = String(res);
-        coinTwoQty = coinTwoQtyInWei;
-        for (var i = 0; i < coinTwoDecimal; i++) {
-            coinTwoQty = coinTwoQty / 10;
-        }
-        onBuyClick();
-    } else {
-        var title = 'ERROR GETTING QUANTITY';
-        var content = `Unable to get quantity of ${coinTwoName} in your wallet`;
-        showAlert(title, content);
-        console.log(err);
-    };
-});
+// coin_name in this format DAI, KNC, OMG
+function balanceOf(user_add, coin_name) {
+    var coinContract = web3.eth.contract(tokensAbi).at(coin_add);
+    coinContract.balanceOf(user_add, function (err, res) {
+        if (!err) {
+            return(String(res), kyberCoinAdd[coin_name].decimals);
+        } else {
+            console.log(err);
+        };
+    });
+}

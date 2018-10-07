@@ -33,7 +33,7 @@ if (typeof web3 !== "undefined") {
 
 // declared variables
 var RopstenCP = "0x9dbe1442e63b56455a338e73508852164f30cb1b";
-var KovanCP = "";
+var KovanCP = "0xCDFcaf564044FEae2e2F81eD875AD85968e41CD8";
 
 var mainKyberAdd = '0x818E6FECD516Ecc3849DAf6845e3EC868087B755';
 var mainKyberContract = web3.eth.contract(kyberMainABI).at(mainKyberAdd);

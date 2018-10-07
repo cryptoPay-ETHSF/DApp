@@ -26,6 +26,33 @@ var cryptoPayABI = [
     "payable": true,
     "stateMutability": "payable",
     "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "payTo",
+        "type": "address"
+      },
+      {
+        "name": "daiAmt",
+        "type": "uint256"
+      },
+      {
+        "name": "payWith",
+        "type": "address"
+      },
+      {
+        "name": "payWithAmt",
+        "type": "uint256"
+      }
+    ],
+    "name": "DeferredPay",
+    "outputs": [
+      
+    ],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
   }
 ];
 

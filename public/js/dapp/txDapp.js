@@ -2,7 +2,6 @@
 var ChangedTknAddr;
 var ChangedTknSrcAmt;
 function funcToSelect(coinOneName) {
-    console.log(coinOneName);
     var coinTwoName = "DAI";
     var coinOneDecimal = kyberCoinAdd[coinOneName].decimals;
     var oneNum = 10 ** coinOneDecimal;

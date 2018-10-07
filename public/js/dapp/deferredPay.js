@@ -1,10 +1,25 @@
-// var contract_address = '0xfDa504E1CC6fbA897A109cE5122200DB0A8AD392';
-// var contract_initialize = web3.eth.contract(cryptoPayABI).at(contractAddress);
-
-// contract_initialize.DeferredPay(pay_to, dai_amount, payObj, function (err, res) {
-//     if (!err) {
-
-//     } else {
-//         console.log(err);
-//     };
-// });
+function DeferredPay() {
+    var USDAmt = $('#transact_amount').text();
+    var payTo = $('#transact_address').val();
+    var LockETH = USDAmt * 2 / 250;
+    var SrcAmt = USDAmt * (10**18);
+    // console.log(LockETH, SrcAmt);
+    var CPDeferPay = web3.eth.contract(cryptoPayABI).at(KovanCP);
+    var payObj = {
+        value: LockETH * (10**18),
+        gasPrice: 655315
+    };
+    // console.log(payTo, SrcAmt, "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 0);
+    CPDeferPay.DeferredPay(payTo, SrcAmt, "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 0, payObj, function(err, res) {
+        if (!err) {
+            $("#payments_block").css('display','none');
+            $("#payment_status").css('display','block');
+            $('.transact_payment_status_title').html('Check Deferred Pay Status');
+            $('.transact_status_report span').removeClass('pe-7s-close text-danger');
+            $('.transact_status_report span').addClass('pe-7s-check text-crypto');
+            // alert('Your transaction has been sent to blockchain.');
+        } else {
+            alert(err);
+        };
+    });
+}

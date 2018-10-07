@@ -38,3 +38,5 @@ var KovanCP = "0xCDFcaf564044FEae2e2F81eD875AD85968e41CD8";
 var mainKyberAdd = '0x818E6FECD516Ecc3849DAf6845e3EC868087B755';
 var mainKyberContract = web3.eth.contract(kyberMainABI).at(mainKyberAdd);
 var DAIRopsten = "0xaD6D458402F60fD3Bd25163575031ACDce07538D";
+
+var MakerDAOContract = web3.eth.contract(MakerDAI).at("0xa71937147b55Deb8a530C7229C442Fd3F31b7db2");

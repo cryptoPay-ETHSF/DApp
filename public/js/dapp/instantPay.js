@@ -92,12 +92,16 @@ function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
             $('.transact_payment_status_title').html('Payment Successful');
             $('.transact_status_report span').removeClass('pe-7s-close text-danger');
             $('.transact_status_report span').addClass('pe-7s-check text-crypto');
+<<<<<<< HEAD
             $('.check_trx span').html('');
             db.ref(`links/${paymentOwner}/${link_id}/DAI_collected`).set(count.dai_received+1).then((snap) => {
+=======
+            db.ref(`links/${paymentOwner}/${link_id}/DAI_collected`).set(count.dai_received+Number(count.price)).then((snap) => {
+>>>>>>> e17bd9f64b6e59c41ff1f4b78e6b1a767fcea874
                 key = snap.key;
                 console.log(key);
              });
-            db.ref(`links/${paymentOwner}/${link_id}/total_transaction`).set(Number(count.no_of_transactions)+Number(count.price)).then((snap) => {
+            db.ref(`links/${paymentOwner}/${link_id}/total_transaction`).set(Number(count.no_of_transactions)+1).then((snap) => {
                 key = snap.key;
                 console.log(key);
             });

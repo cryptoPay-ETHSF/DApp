@@ -1,4 +1,23 @@
 var cryptoPayABI = [
+    {
+    "constant": true,
+    "inputs": [
+        {
+        "name": "",
+        "type": "address"
+        }
+    ],
+    "name": "BorrowerCDP",
+    "outputs": [
+        {
+        "name": "",
+        "type": "bytes32"
+        }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+    },
   {
     "constant": false,
     "inputs": [
@@ -262,4 +281,36 @@ const kyberMainABI = [{
     ],
     "name": "ExecuteTrade",
     "type": "event"
+}];
+
+var MakerDAI = [{
+    "constant": true,
+    "inputs": [
+        {
+        "name": "",
+        "type": "bytes32"
+        }
+    ],
+    "name": "cups",
+    "outputs": [
+        {
+        "name": "lad",
+        "type": "address"
+        },
+        {
+        "name": "ink",
+        "type": "uint256"
+        },
+        {
+        "name": "art",
+        "type": "uint256"
+        },
+        {
+        "name": "ire",
+        "type": "uint256"
+        }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
 }];

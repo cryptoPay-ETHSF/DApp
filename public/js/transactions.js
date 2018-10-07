@@ -156,7 +156,7 @@ $('#transact_form').submit(function(e){
     // ends here
     var payment_status = true;
 
-    payment_method(payment_status);
+    // payment_method(payment_status);
 
 });
 
@@ -165,7 +165,7 @@ function payment_method(pay_status) {
     $("#payments_block").css('display','none');
     $("#payment_status").css('display','block');
 
-    if(pay_status){
+    if (pay_status) {
 
         $('.transact_payment_status_title').html('Payment Successful');
         $('.transact_status_report span').removeClass('pe-7s-close text-danger');

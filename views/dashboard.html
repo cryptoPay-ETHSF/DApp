@@ -15,6 +15,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/clipboard.min.js"></script>
+    <script src="js/dapp/abi.js"></script>
     <script src="js/dapp/ethClient.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script src="js/fire.js"></script>
@@ -61,9 +62,13 @@
                                         </a>
                                 </li>
                                 <li>
-                                    <a href="https://kovan.etherscan.io/">
-                                        <span style="font-size: 12px;line-height: 20px;vertical-align: middle;letter-spacing: 1px;">KOVAN</span>
-                                        <span class="fa fa-circle" style="vertical-align: middle;font-size: 14px;"></span>
+                                    <a>
+                                        <span style="font-size: 12px;line-height: 20px;vertical-align: middle;letter-spacing: 1px;" id="getDaiBal">DAI : ...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span style="font-size: 12px;line-height: 20px;vertical-align: middle;letter-spacing: 1px; color: white" id="getETHBal">ETH : ...</span>
                                     </a>
                                 </li>
                                 <li>
@@ -325,6 +330,8 @@
 </div>
 <!-- accept payments block end -->
 <script src="js/dashboard.js"></script>
+<script src="js/dapp/kyberCoinAdd.js"></script>
+<script src="js/dapp/balance.js"></script>
 <script src="js/accept_payments.js"></script>
 </body>
 </html>

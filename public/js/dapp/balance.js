@@ -1,8 +1,12 @@
-function ethBalance(user_add) {
+var ethBalance;
+
+function ethBal(user_add) {
     web3.eth.getBalance(user_add, function (err, res) {
         if (!err) {
             console.log(String(res));
             $('#getETHBal').text(`ETH : ${(String(res)/10**18).toFixed(3)}`);
+            ethBalance = Number(res)/10**18;
+            console.log(ethBalance);
         } else {
             console.error(err);
         };
@@ -29,7 +33,5 @@ function daiBalance(user_add, coin_name) {
     });
 }
 
-setInterval(function() {
-    ethBalance(account);
-    daiBalance(account, 'DAI');
-}, 250);
+ethBal(account);
+daiBalance(account, 'DAI');

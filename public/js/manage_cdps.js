@@ -109,3 +109,55 @@ $(document).ready(function() {
     });
 
 });
+$( document ).ready(function() {
+    function setEthRemain() {
+        if (ethBalance) {
+            console.log(ethBalance);
+            $('#cdp_bal_eth').val(ethBalance.toFixed(2));
+            $('#cdp_collatoral_name').attr({"max": ethBalance});
+            $('#cdp_bal_eth').attr({"max": ethBalance});
+        } else {
+            setTimeout(function() {
+                setEthRemain();
+            }, 500);
+        }
+    }
+    setEthRemain();
+    var ethToDai = 255;
+
+    var ethToLock;
+    var daiFromLock;
+    var percentDaiFromLock = 33;
+    var ethRemainAfterLock;
+    var totlePriceinDai;
+
+    $('#cdp_collatoral_name').on('input', function () {
+        ethToLock = $(this).val();
+        if (ethToLock > ethBalance) {
+            ethToLock = ethBalance;
+            $('#cdp_collatoral_name').val(ethToLock.toFixed(2));
+        }
+        totlePriceinDai = ethToLock * ethToDai;
+        daiFromLock = (percentDaiFromLock / 100) * totlePriceinDai;
+        ethRemainAfterLock = ethBalance - ethToLock;
+        $('#cdp_dai_against_eth').attr({"max": totlePriceinDai*0.5});
+        $('#cdp_dai_against_eth').val(daiFromLock.toFixed(2));
+        $('#cdp_bal_eth').val(ethRemainAfterLock.toFixed(2));
+    });
+
+    $('#cdp_dai_against_eth').on('input', function () {
+        daiFromLock =  $(this).val();
+        percentDaiFromLock = (daiFromLock / totlePriceinDai)*100;
+        $('#cdp_perc_dai').val(percentDaiFromLock.toFixed(2));
+    });
+
+    $('#cdp_perc_dai').on('input', function () {
+        percentDaiFromLock = $(this).val();
+        if (percentDaiFromLock > 50) {
+            percentDaiFromLock = 50;
+            $('#cdp_perc_dai').val(percentDaiFromLock.toFixed(0));
+        }
+        daiFromLock = (percentDaiFromLock/100) * totlePriceinDai;
+        $('#cdp_dai_against_eth').val(daiFromLock.toFixed(2));
+    });
+});

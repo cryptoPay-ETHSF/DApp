@@ -32,8 +32,9 @@ if (typeof web3 !== "undefined") {
 }
 
 // declared variables
-var RopstenCP = 0x9dbe1442e63b56455a338e73508852164f30cb1b;
+var RopstenCP = "0x9dbe1442e63b56455a338e73508852164f30cb1b";
 var KovanCP = "";
 
 var mainKyberAdd = '0x818E6FECD516Ecc3849DAf6845e3EC868087B755';
 var mainKyberContract = web3.eth.contract(kyberMainABI).at(mainKyberAdd);
+var DAIRopsten = "0xaD6D458402F60fD3Bd25163575031ACDce07538D";

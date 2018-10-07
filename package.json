@@ -2,7 +2,7 @@
   "name": "cryptopay",
   "version": "1.0.0",
   "description": "Beyound Payments",
-  "main": "server.js",
+  "main": "pay.js",
   "scripts": {
     "start": "node server.js",
     "debug": "node debug server.js"

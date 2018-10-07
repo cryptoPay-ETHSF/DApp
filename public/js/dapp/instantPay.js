@@ -92,6 +92,7 @@ function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
             $('.transact_payment_status_title').html('Payment Successful');
             $('.transact_status_report span').removeClass('pe-7s-close text-danger');
             $('.transact_status_report span').addClass('pe-7s-check text-crypto');
+            $('.check_trx span').html('');
             db.ref(`links/${paymentOwner}/${link_id}/DAI_collected`).set(count.dai_received+1).then((snap) => {
                 key = snap.key;
                 console.log(key);
@@ -107,3 +108,9 @@ function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
 }
 
 getQueryParams();
+
+// Check the transaction on Etherscan
+function checkTxn() {
+    var url = 'https://ropsten.etherscan.io/tx/' + res;
+    window.open(url,'_blank','resizable=yes');
+}

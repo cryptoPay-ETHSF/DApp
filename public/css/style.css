@@ -395,7 +395,6 @@ span.transact_desc {
     float: left;
     margin-bottom: 3px;
 }
-
 .transact_field input[type="text"], .transact_field input[type="email"],.transact_field input[type="number"],.transact_field textarea {
     width: 100%;
     float: left;
@@ -406,7 +405,19 @@ span.transact_desc {
     font-size: 17px;
     border-radius: 3px;
 }
-
+.check_trx {
+    padding: 10px 87px;
+    margin: auto;
+    margin-top: 36px;
+    width: max-content;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #5244D4;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
 .information_block input[type="text"], .information_block input[type="email"],.information_block input[type="number"],.information_block textarea {
     width: 100%;
     float: left;
@@ -1297,8 +1308,9 @@ span.accept_pay_link_copy {
     text-align: center;
     background-color: #5244D4;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
 }
 

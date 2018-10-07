@@ -216,8 +216,3 @@ $('.changeTokenBut').click(function() {
 $('.selectCoinsClick').click(function() {
     $('.coinsBox').fadeOut();
 });
-
-var getExpectedPrice;
-function funcToSelect(coinId) {
-    var coinKyberId = coinsData[coinId].kyber;
-}

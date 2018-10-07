@@ -234,7 +234,7 @@ var cryptoPayABI = [
     }
   ];
 
-  const tokensAbi = [{
+const tokensAbi = [{
     "constant": true,
     "inputs": [{
         "name": "_owner",

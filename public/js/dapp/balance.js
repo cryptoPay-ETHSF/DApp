@@ -16,7 +16,7 @@ function ethBal(user_add) {
 // coin_name in this format DAI, KNC, OMG
 function daiBalance(user_add, coin_name) {
     if (checklist.networkId == "3") {
-        var coin_add = kyberCoinAdd[coin_name].contractAddress;
+        var coin_add = "0xaD6D458402F60fD3Bd25163575031ACDce07538D";
     } else if (checklist.networkId == "42") {
         var coin_add = "0xc4375b7de8af5a38a93548eb8453a498222c4ff2";
     }

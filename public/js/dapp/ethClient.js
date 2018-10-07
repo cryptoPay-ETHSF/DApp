@@ -32,7 +32,7 @@ if (typeof web3 !== "undefined") {
 }
 
 // declared variables
-var RopstenCP = "0x9dbe1442e63b56455a338e73508852164f30cb1b";
+var RopstenCP = "0x6358C4F33bca651A2B60A8209778f57725305db1";
 var KovanCP = "0xCDFcaf564044FEae2e2F81eD875AD85968e41CD8";
 
 var mainKyberAdd = '0x818E6FECD516Ecc3849DAf6845e3EC868087B755';

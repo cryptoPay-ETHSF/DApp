@@ -59,7 +59,7 @@ db.ref('links/' + account).on('value', function(snapshot) {
                         <td>${i+1}</td>
                         <td>${data[key].name}</td>
                         <td>
-                            <span id="element_copy_${i+1}">http://localhost:3030/payments?id=${key}</span>
+                            <span id="element_copy_${i+1}">https://cryptopay.instadapp.io/payments?id=${key}</span>
                             <span onclick="copyTheLink('element_copy_${i+1}')" class="copy_link">
                                 <i class="fa fa-clone" aria-hidden="true"></i>
                             </span>

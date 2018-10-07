@@ -72,7 +72,7 @@ $('#accept_payments').submit(function(e){
             key = snap.key 
             $( ".accept_pay_build_title" ).html(accept_pay_name);
             $( ".accept_pay_build_desc" ).html(accept_pay_desc);
-            $('#accept_pay_build').val(`http://localhost:3030/payments?id=${key}`); 
+            $('#accept_pay_build').val(`https://cryptopay.instadapp.io/payments?id=${key}`); 
          });
 
 

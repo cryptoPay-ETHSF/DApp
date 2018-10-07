@@ -20,6 +20,9 @@ function daiBalance(user_add, coin_name) {
     coinContract.balanceOf(user_add, function (err, res) {
         if (!err) {
             $('#getDaiBal').text(`DAI : ${(String(res)/10**18).toFixed(3)}`);
+            if ($('#daiBalCDPManage')) {
+                $('#daiBalCDPManage').text(`DAI : ${(String(res)/10**18).toFixed(3)}`);
+            }
         } else {
             console.log(err);
         };

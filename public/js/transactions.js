@@ -152,7 +152,7 @@ $('#transact_form').submit(function(e){
     var transact_address = $('#transact_address').val();
 
     // payment functionality goes here
-    console.log(transact_value +"--- ---"+ transact_address);
+    // console.log(transact_value +"--- ---"+ transact_address);
     // ends here
     var payment_status = true;
 

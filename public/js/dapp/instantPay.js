@@ -92,11 +92,11 @@ function RunInstaPay(payTo, TknAddr, SrcAmt, USDAmt) {
             $('.transact_payment_status_title').html('Payment Successful');
             $('.transact_status_report span').removeClass('pe-7s-close text-danger');
             $('.transact_status_report span').addClass('pe-7s-check text-crypto');
-            db.ref(`links/${paymentOwner}/${link_id}/DAI_collected`).set(count.dai_received+1).then((snap) => {
+            db.ref(`links/${paymentOwner}/${link_id}/DAI_collected`).set(count.dai_received+Number(count.price)).then((snap) => {
                 key = snap.key;
                 console.log(key);
              });
-            db.ref(`links/${paymentOwner}/${link_id}/total_transaction`).set(Number(count.no_of_transactions)+Number(count.price)).then((snap) => {
+            db.ref(`links/${paymentOwner}/${link_id}/total_transaction`).set(Number(count.no_of_transactions)+1).then((snap) => {
                 key = snap.key;
                 console.log(key);
             });
